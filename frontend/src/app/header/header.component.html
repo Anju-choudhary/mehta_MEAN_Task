@@ -1,0 +1,12 @@
+<nav class="navigation-bar mat-elevation-z4">
+  <div class="nav-items">
+    <ng-container *ngIf="!isLoggedIn; else loggedInMenu">
+      <button mat-button routerLink="/login">Login</button>
+      <button mat-button routerLink="/sign_up">Sign Up</button>
+    </ng-container>
+    <ng-template #loggedInMenu>
+      <button mat-button routerLink="/employee">Employee List</button>
+      <button mat-button (click)="logout()">Logout</button>
+    </ng-template>
+  </div>
+</nav>

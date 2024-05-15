@@ -1,0 +1,24 @@
+/* Add this CSS in the same file or in your component's CSS file */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  button.disabled {
+    opacity: 0.5;
+  }
+  

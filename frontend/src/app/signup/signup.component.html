@@ -1,0 +1,20 @@
+<form [formGroup]="signupForm" (ngSubmit)="sign_up()" class="signup-form">
+  <mat-form-field class="form-field">
+    <mat-label>UserName</mat-label>
+    <input matInput formControlName="username" placeholder="UserName" type="email">
+    <mat-error *ngIf="signupForm.hasError('required', 'username') && signupForm.controls['username'].touched" class="error-message">*UserName is required</mat-error>
+  </mat-form-field>
+  <mat-form-field class="form-field">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" placeholder="Email" type="email">
+    <mat-error *ngIf="signupForm.hasError('required', 'email') && signupForm.controls['email'].touched" class="error-message">*Email is required</mat-error>
+    <mat-error *ngIf="signupForm.hasError('email', 'email')" class="error-message">*Email is invalid</mat-error>
+  </mat-form-field>
+  <mat-form-field class="form-field">
+    <mat-label>Password</mat-label>
+    <input matInput formControlName="password" placeholder="Password (at least 3 characters, including special characters)" type="password">
+    <mat-error *ngIf="signupForm.hasError('required', 'password') && signupForm.controls['password'].touched" class="error-message">*Password is required</mat-error>
+    <mat-error *ngIf="signupForm.hasError('minlength', 'password')" class="error-message">Password must be at least 8 characters long</mat-error>
+  </mat-form-field>
+  <button mat-raised-button [disabled]="signupForm.invalid" [class.disabled]="signupForm.invalid" color="primary" type="submit">Signup</button>
+</form>

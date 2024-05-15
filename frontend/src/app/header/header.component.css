@@ -1,0 +1,22 @@
+/* Add this CSS in the same file or in your component's CSS file */
+.navigation-bar {
+  width: 100%;
+  padding: 15px;
+  background-color: #5c6bc0; /* Change to the desired background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items button {
+  color: #e8eaf6; /* Change to the desired text color */
+  font-weight: bold;
+  margin-right: 10px; /* Add space between buttons */
+}
+
+.nav-items button:last-child {
+  margin-right: 0; /* Remove margin from the last button */
+}
