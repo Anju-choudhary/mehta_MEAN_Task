@@ -34,7 +34,6 @@ export class SignupComponent implements OnInit {
       console.log('Form submitted:', this.signupForm.value);
       this.authService.registerService(this.signupForm.value).subscribe({
         next: (res) => {
-          alert('User Created!');
           this.openConfirmationDialog();
           this.signupForm.reset();
           this.router.navigate(['login']);
