@@ -7,6 +7,11 @@
 --npm install--
 --node app--
 
+--endpoint--
+--app.use("/api/auth", authRoute);--
+--http://localhost:3000/api/auth/login--
+--http://localhost:3000/api/auth/sign_up--
+
 ---- to start frontend--
 --npm install--
 --ng serve--

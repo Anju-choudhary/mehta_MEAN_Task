@@ -45,6 +45,7 @@ app.use(
 // Sync session store
 sessionStore.sync();
 
+//endpoint of route
 app.use("/api/auth", authRoute);
 
 //  server start here
